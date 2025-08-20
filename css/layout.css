@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* レイアウトのためのCSS */
+
+body {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    word-wrap: break-word;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    outline: none;
+}
+
+img,video {
+    width: 100%;
+    height: auto;
+}
+
+/* font-family */
+
+#splash-logo,
+.lead,
+h1,
+#pc-nav,
+#footer {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+#header {
+    position: fixed;
+    /*header固定*/
+    height: 100px;
+    /*Headerの高さ設定*/
+    width: 100%;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+#pc-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 0 0 0 5%;
+}
+
+#pc-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 0 15px;
+    transition: all 0.3s;
+}
+
+#pc-nav li.current a,
+#pc-nav li a:hover {
+    color: #eb6100;
+}
+
+
+/* splash */
+
+#splash-logo {
+    font-size: 1.2rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #eb6100;
+}
+
+/*pc-nav*/
+
+#pc-nav span.bgLRextend::before {
+    background: #333;
+}
+
+/* heading */
+
+h1 {
+    text-transform: uppercase;
+    color: #eb6100;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    line-height: 1;
+    letter-spacing: 0.2em;
+}
+
+/* lead */
+.lead {
+    position: fixed;
+    bottom: 10%;
+    left: 5%;
+    color: #008;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* footer */
+#footer {
+    padding: 50px 0;
+    border-top: 1px solid #333;
+    text-align: center;
+    color: #888;
+    background: #fff;
+    position: relative;
+    text-transform: uppercase;
+}

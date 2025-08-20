@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <title>ログイン</title>
+</head>
+
+<body>
+  <h1>ユーザログイン</h1>
+  <form method="post" action="./login_submit.php">
+    <dl>
+      <dt><label>ユーザID</label></dt>
+      <dd><input type="text" name="user_id" /></dd>
+    </dl>
+    <dl>
+      <dt><label>パスワード</label></dt>
+      <dd><input type="password" name="user_pw" /></dd>
+    </dl>
+    <button type="button" onclick="location.href='./index.html'">戻る</button>
+    <button type="submit" id="login" name="login">ログイン</button>
+  </form>
+</body>
+
+</html>

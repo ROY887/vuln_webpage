@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <title>マイページ</title>
+</head>
+
+<body>
+  <h1>マイページ</h1>
+  <form method="post" action="./mypage_submit.php">
+    <dl>
+      <dt><label>ユーザID</label></dt>
+      <dd><input type="text" name="user_id" readonly /></dd>
+    </dl>
+    <dl>
+      <dt><label>ユーザ名</label></dt>
+      <dd><input type="text" name="user_name" /></dd>
+    </dl>
+    <dl>
+      <dt><label>メールアドレス</label></dt>
+      <dd><input type="text" name="email" /></dd>
+    </dl>
+    <dl>
+      <dt><label>どんなエンジニアになりたいか</label></dt>
+      <dd><input type="text" name="myjobs" /></dd>
+    </dl>
+    <button type="submit" name="mypage">保存</button>
+    <button type="button" onclick="location.href='./logout_submit.php'">ログアウト</button>
+  </form>
+
+  <!-- フォームの内容をDBから取得して表示するスクリプト -->
+  <script type="module">
+    const data = await fetch("php/mypage.php").then((res) => {
+      return res.json();
+    });
+    document.getElementByName("user_id")[0].value = data.user_id;
+    document.getElementByName("user_name")[0].value = data.user_name;
+    document.getElementByName("email")[0].value = data.email;
+    document.getElementByName("myjobs")[0].value = data.myjobs;
+  </script>
+</body>
+
+</html>
